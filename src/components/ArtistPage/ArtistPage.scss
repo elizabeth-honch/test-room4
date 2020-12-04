@@ -1,0 +1,19 @@
+.information {
+  font-size: 18px;
+  border: 1px dashed #ccc;
+  padding: 10px;
+  margin: 15px;
+
+  &__name {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__tag-name {
+    margin-right: 50px;
+  }
+}
