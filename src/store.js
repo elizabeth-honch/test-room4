@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
 import { createStore } from 'redux';
 
-const initial = [];
+// const initial = [];
 
 const initialState = {
-  tracks: initial,
-  artist: initial,
-  newTrack: initial,
+  tracks: [],
+  artist: {},
+  newTrack: [],
 };
 
 const reducer = (state, action) => {
@@ -18,6 +18,8 @@ const reducer = (state, action) => {
       };
 
     case 'SHOW_INFO':
+      console.log('in reducer');
+
       return {
         ...state,
         artist: action.payload.artist,
