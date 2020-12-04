@@ -1,9 +1,4 @@
-# React Starter Pack
+# Test work of firm ROOM4
 
-To use this template click `Use this template`
+[DEMOLINK]
 
-### Available Scripts
-
-`Deploy` - available to deploy your application to gh-pages
-
-`SCSS Preprocessor` - available to write your styles with modern style language
