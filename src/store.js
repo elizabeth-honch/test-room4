@@ -1,7 +1,4 @@
-/* eslint-disable no-console */
 import { createStore } from 'redux';
-
-// const initial = [];
 
 const initialState = {
   tracks: [],
@@ -18,8 +15,6 @@ const reducer = (state, action) => {
       };
 
     case 'SHOW_INFO':
-      console.log('in reducer');
-
       return {
         ...state,
         artist: action.payload.artist,

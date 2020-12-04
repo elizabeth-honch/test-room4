@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
@@ -13,20 +12,13 @@ export const ArtistPage = (props) => {
   const artist = useSelector(state => state.artist);
   const dispatch = useDispatch();
 
-  // console.log('name', name);
-
   useEffect(() => {
-  // console.log('before if');
     if (name === 'Name') {
       return;
     }
 
-    // eslint-disable-next-line no-console
-    console.log('name in UseEffect', name);
     getArtist(name)
       .then((data) => {
-        // eslint-disable-next-line no-console
-        console.log(data);
         dispatch({
           type: 'SHOW_INFO',
           payload: { artist: data },
@@ -34,11 +26,7 @@ export const ArtistPage = (props) => {
       });
   }, []);
 
-  // eslint-disable-next-line no-console
-  console.log('artist - ', artist);
-
-  // eslint-disable-next-line consistent-return
-  return (
+  return Object.keys(artist).length && (
     <div>
       <div className="information">
         <h4 className="information__name">{artist.name}</h4>
@@ -66,9 +54,9 @@ ArtistPage.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
   }).isRequired,
-  props: PropTypes.shape({
-    location: PropTypes.shape({
-      pathname: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
+  props: PropTypes.shape({}),
+};
+
+ArtistPage.defaultProps = {
+  props: {},
 };
